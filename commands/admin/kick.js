@@ -133,14 +133,13 @@ module.exports = {
         });
 
         logChannel.send(embed);
-
+        
+      } else if (emoji === "❌") {
+        msg.delete();
         const embed8 = new Discord.RichEmbed()
     .setColor("PURPLE")
     .setAuthor("Kick")
     .setDescription("Kick ennulé")
-        
-      } else if (emoji === "❌") {
-        msg.delete();
 
         message.channel.send(embed8).then(m => m.delete(10000));
       }
