@@ -12,7 +12,7 @@ module.exports = {
     .setColor("PURPLE")
     .setAuthor("Pong !")
     .addField("Temps de reaction :", `${msg.createdTimestamp - message.createdTimestamp}ms`)
-    .addField("API latence est de :", `${Math.round(bot.ping)}ms`)
+    .addField("API latence est de :", `${Math.round(client.ping)}ms`)
     .setTimestamp()
 
     msg.edit(embed);

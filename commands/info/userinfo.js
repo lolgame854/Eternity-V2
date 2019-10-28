@@ -1,5 +1,4 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client()
 const { stripIndents } = require("common-tags");
 const { getMember, formatDate } = require("../../functions.js");
 

@@ -7,9 +7,9 @@ module.exports = {
   run: async (client, message, args) => {
     const embed = new Discord.RichEmbed()
     .setColor("PURPLE")
-    .addField(":upside_down: Nom :", bot.user.username)
+    .addField(":upside_down: Nom :", client.user.username)
     .addField(":gear: Commandes :", config.commande)
-    .addField(":sunglasses: Nombre de serveur ou je suis :", bot.guilds.size)
+    .addField(":sunglasses: Nombre de serveur ou je suis :", client.guilds.size)
     .addField(":tools: Mon createur :", "lolgame854#3470")
     .addField(":page_facing_up: Version du bot :", config.version)
     .setFooter("Eternity © 2019 Un problème ? Demandes à lolgame854#3470 !")

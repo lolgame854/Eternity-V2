@@ -1,5 +1,5 @@
 const { Client, Collection } = require("discord.js");
-const config = require('./config.json')
+const { config } = require("dotenv");
 const fs = require("fs")
 const Discord = require('discord.js')
 
@@ -77,6 +77,7 @@ client.on("message", async message => {
   .setColor("PURPLE")
   .setAuthor(client.user.username)
   .setDescription("Seul le createur peut mettre le bot en maintenance")
+  
   if (message.author.id === "411817236332806165") messageAuthorIsSTAFF = true // ID du staff du bot
 
     if (maintenance){
@@ -108,4 +109,4 @@ client.on("message", async message => {
 
 });
 
-client.login(config.token);
+client.login(process.env.TOKEN);

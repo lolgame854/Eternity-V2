@@ -1,5 +1,4 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client()
 const { promptMessage } = require("../../functions.js");
 module.exports = {
     name: "help",
@@ -20,7 +19,7 @@ module.exports = {
         .setFooter("Eternity © 2019 Un problème ? Demandes à lolgame854#3470 !")
         
         const embed2 = new Discord.RichEmbed()
-        .setAuthor(bot.user.username)
+        .setAuthor(client.user.username)
         .setColor("PURPLE")
         .setDescription(":page_facing_up: Voulez vous que je vous envoie les commande en ``MP`` ?\n \nAction invalide dans 10seconds !")
         .setFooter("Eternity © 2019 | by lolgame854")
@@ -30,7 +29,7 @@ module.exports = {
         .setAuthor(message.author.username)
         .setDescription(":arrow_right: Je viens de t'envoyer les commandes en ``MP`` ^^")
         .setTimestamp()
-        .setFooter(bot.user.username, bot.user.displayAvatarURL)
+        .setFooter(client.user.username, client.user.displayAvatarURL)
     
         await message.channel.send(embed2).then(async msg => {
             const emoji = await promptMessage(msg, message.author, 10, ["✅", "❌"]);
