@@ -5,7 +5,6 @@ module.exports = {
   category: "admin",
   description: "",
   run: async (client, message, args) => {
-    const warns = JSON.parse(fs.readFileSync('../../warns.json'))
     const noperm = new Discord.RichEmbed()
     .setColor("PURPLE")
     .setTitle("No permission")
@@ -27,6 +26,7 @@ module.exports = {
       .setAuthor("Warn")
       .setDescription("Je ne pas unwarn ce membre.")
 
+      let warns = JSON.parse(fs.readFileSync('../../warns.json'))
     let member = message.mentions.members.first()
     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(noperm)
     if(!member) return message.channel.send("Membre introuvable")
