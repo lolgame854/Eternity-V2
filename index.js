@@ -35,7 +35,7 @@ client.on('ready', () => {
     ]
     setInterval(function() {
         let statu = status[Math.floor(Math.random() * status.length)];
-        client.user.setActivity(status, {type: "WATCHING"})
+        client.user.setActivity(statu, {type: "WATCHING"})
     }, interval);
 })
 
