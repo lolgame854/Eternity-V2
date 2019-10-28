@@ -30,7 +30,7 @@ client.on("ready", () => {
   client.user.setPresence({
     status: "online",
     game: {
-      name: `${client.guilds.memberCount} serveurs`,
+      name: `Je sui${client.guilds.member.toLowerCase()} serveurs`,
       type: "WATCHING"
     }
   });
