@@ -52,7 +52,7 @@ module.exports = {
         .send(embed4)
         .then(m => m.delete(5000));
 
-    const embed = new RichEmbed()
+    const embed10 = new RichEmbed()
       .setColor("PURPLE")
       .setTimestamp()
       .setFooter(message.guild.name, message.guild.iconURL)
@@ -62,6 +62,6 @@ module.exports = {
             **> Reporté dans:** ${message.channel}
             **> Raison:** ${args.slice(1).join(" ")}`);
 
-    return channel.send(embed);
+    return channel.send(embed10);
   }
 };
