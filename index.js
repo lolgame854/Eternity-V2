@@ -27,19 +27,13 @@ config({
 client.on("ready", () => {
   console.log(`Salut, ${client.user.username} est en ligne !`);
 
-  let status = [
-    `${client.guils.size} serveur`,
-    `${client.user.size} membre`,
-    `${client.channel.size} channel`,
-    `e! => e!help`
-]
-  setInterval(function() {
-    let statu = status[Math.floor(Math.random() * status.length)];
-    client.user.setPresence({
-      status: "online",
-      game: {statu}
-    });
-}, interval);
+  client.user.setPresence({
+    status: "online",
+    game: {
+      name: `Prefix => w!| ${client.guilds.size} serveurs`,
+      type: "WATCHING"
+    }
+  });
 });
 
 client.on("message", async message => {
