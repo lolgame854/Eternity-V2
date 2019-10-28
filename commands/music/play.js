@@ -25,11 +25,6 @@ module.exports = {
     .setColor("PURPLE")
     .setDescription("Lien youtube invalide !")
 
-    const embed5 = new Discord.RichEmbed()
-    .setAuthor("Music")
-    .setColor("PURPLE")
-    .setDescription(`**Musique ajoutée :** ${info.title}`)
-
 
     if(!message.member.voiceChannel)
     return message.channel.send(embed)
@@ -44,6 +39,10 @@ module.exports = {
     const dispacher = await connection.playStream(
         ytdl(args[0], { filter: 'audioonly'})
         );
+        const embed5 = new Discord.RichEmbed()
+    .setAuthor("Music")
+    .setColor("PURPLE")
+    .setDescription(`**Musique ajoutée :** ${info.title}`)
         message.channel.send(embed5)
   }
 };
