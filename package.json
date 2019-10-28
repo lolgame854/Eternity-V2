@@ -1,0 +1,33 @@
+{
+  "name": "eternity-v2",
+  "version": "1.0.0",
+  "description": "Bot créé par lolgame854",
+  "main": "index.js",
+  "engines": {
+    "node": "10.16.3"
+  },
+  "dependencies": {
+    "chauncey": "^1.0.14",
+    "ascii-table": "^0.0.9",
+    "mathjs": "^6.2.3",
+    "common-tags": "^1.8.0",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.1.0",
+    "ffmpeg-binaries": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "minecraft-pinger": "^1.0.3",
+    "moment": "^2.24.0",
+    "opusscript": "^0.0.7",
+    "request": "^2.88.0",
+    "superagent": "^5.1.0",
+    "ytdl-core": "^1.0.0",
+    "ytdl-core-discord": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "lolgame854",
+  "license": "ISC"
+}

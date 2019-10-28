@@ -1,0 +1,12 @@
+Voici se que tu doit mettre en début de chaque fichier .js :
+
+
+const Discord = require('discord.js')
+module.exports = {
+  name: "",
+  category: "",
+  description: "",
+  run: async (client, message, args) => {
+    
+  }
+};
