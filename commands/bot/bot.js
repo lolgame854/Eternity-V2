@@ -11,6 +11,7 @@ module.exports = {
     .addField(":upside_down: Nom :", client.user.username)
     .addField(":gear: Commandes :", config.commande)
     .addField(":sunglasses: Nombre de serveur ou je suis :", client.guilds.size)
+    .addField(":sunglasses: Nombre de membre de tout les serveur ou je suis :", client.users.size)
     .addField(":tools: Mon createur :", "lolgame854#3470")
     .addField(":page_facing_up: Version du bot :", config.version)
     .setFooter("Eternity © 2019 Un problème ? Demandes à lolgame854#3470 !")
