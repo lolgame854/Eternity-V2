@@ -13,6 +13,7 @@ module.exports = {
     .setThumbnail(client.user.displayAvatarURL)
     .setTimestamp()
     .setFooter("Eternity © 2019 Un problème ? Demandes à lolgame854#3470 !")
-    message.channel.send(embed)
+    let msg = await message.channel.send(embed)
+      await msg.react('👍')
   }
 };
