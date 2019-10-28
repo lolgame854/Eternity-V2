@@ -1,10 +1,15 @@
 const { Client, Collection } = require("discord.js");
 const { config } = require("dotenv");
 const fs = require("fs");
+const Discord = require('discord.js')
 
 const client = new Client({
   disableEveryone: true
 });
+
+var maintenance = false // Si on redemarre le bot, il n'y a plus de maintenance
+var list_commandes = ["8ball", "avatar", "chat", "chien", "ping", "say", "sayembed"] // Liste de toute les commandes du bot
+var messageAuthorIsSTAFF = false // Si l'auteur de la commande est un membre du staff
 
 client.commands = new Collection();
 client.aliases = new Collection();
@@ -52,6 +57,55 @@ client.on("message", async message => {
   if (!command) command = client.commands.get(client.aliases.get(cmd));
 
   if (command) command.run(client, message, args);
+
+  const embed = new Discord.RichEmbed()
+  .setColor("PURPLE")
+  .setAuthor(client.user.username)
+  .setDescription("Maintenance activé")
+
+  const embed2 = new Discord.RichEmbed()
+  .setColor("PURPLE")
+  .setAuthor(client.user.username)
+  .setDescription("Maintenance désactivé")
+
+  const embed3 = new Discord.RichEmbed()
+  .setColor("PURPLE")
+  .setAuthor(client.user.username)
+  .setDescription("Le bot est actuellement en maintenance !")
+
+  const embed4 = new Discord.RichEmbed()
+  .setColor("PURPLE")
+  .setAuthor(client.user.username)
+  .setDescription("Seul le createur peut mettre le bot en maintenance")
+  if (message.author.id === "411817236332806165") messageAuthorIsSTAFF = true // ID du staff du bot
+
+    if (maintenance){
+        list_commandes.forEach(function(item, index, array) {
+            if (message.content.startsWith(prefix + item)){
+                if (!messageAuthorIsSTAFF) {
+                    message.channel.send(embed3)
+                    maintenance = true
+                } 
+            }
+        });
+    }
+
+    if (!messageAuthorIsSTAFF && maintenance) return
+
+    if(message.content === prefix + "maintenance"){
+        if (message.author.id === "411817236332806165") {
+            if (maintenance){
+                maintenance = false
+                message.channel.send(embed2)
+            } else {
+                maintenance = true
+                message.channel.send(embed)
+            } 
+        } else {
+            message.channel.send(embed4)
+        }
+    }
+
 });
 
 client.login(process.env.TOKEN);
