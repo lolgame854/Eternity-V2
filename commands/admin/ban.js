@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
+const { promptMessage } = require("../../functions.js");
 module.exports = {
   name: "ban",
   category: "admin",
