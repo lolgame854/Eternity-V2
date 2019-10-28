@@ -24,17 +24,20 @@ config({
   require(`./handlers/${handler}`)(client);
 });
 
-client.on("ready", () => {
+client.on('ready', () => {
   console.log(`Salut, ${client.user.username} est en ligne !`);
 
-  client.user.setPresence({
-    status: "online",
-    game: {
-      name: `Prefix => w!| ${client.guilds.size} serveurs`,
-      type: "WATCHING"
-    }
-  });
-});
+  let status = [
+    `${client.guilds.size} serveur`,
+    `${client.users.size} membre`,
+    `${client.channels.size} channel`,
+    `e! => e!help`
+]
+  setInterval(function() {
+    let statu = status[Math.floor(Math.random() * status.length)];
+    client.user.setActivity(statu, {type: "WATCHING"})
+}, 5000);
+})
 
 client.on("message", async message => {
   const prefixe = "e!"

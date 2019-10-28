@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const { getMember, formatDate } = require("../../functions.js");
 module.exports = {
   name: "avatar",
   category: "fun",

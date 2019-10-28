@@ -13,6 +13,7 @@ module.exports = {
         .addField("Propriétaire :", message.guild.owner)
         .addField("Nombre de joueur :", message.guild.memberCount)
         .addField("Nombre de role :", message.guild.roles.size)
+        .addField("Nombre de channel et de vocal :", message.guild.channels.size)
         .setFooter("Eternity © 2019 | by lolgame854")
         message.channel.send(embed)
     }
