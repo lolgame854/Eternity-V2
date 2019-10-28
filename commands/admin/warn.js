@@ -1,11 +1,11 @@
 const Discord = require('discord.js')
 const fs = require("fs")
-const warns = JSON.parse(fs.readFileSync('../../warns.json'))
 module.exports = {
   name: "warn",
   category: "admin",
   description: "",
   run: async (client, message, args) => {
+    const warns = JSON.parse(fs.readFileSync('../../warns.json'))
     const noperm = new Discord.RichEmbed()
     .setColor("PURPLE")
     .setTitle("No permission")
