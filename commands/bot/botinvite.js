@@ -4,7 +4,7 @@ module.exports = {
   category: "bot",
   description: "",
   run: async (client, message, args) => {
-    const embed = new RichEmbed()
+    const embed = new Discord.RichEmbed()
     .setAuthor(client.user.username)
     .setTitle("Inviter Eternity")
     .setDescription("Pour inviter le bot click sur ``Inviter Eternity``")
