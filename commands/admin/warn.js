@@ -24,7 +24,7 @@ module.exports = {
         let member = message.mentions.members.first()
         if (!member) return message.channel.send(embed)
         if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.ownerID) return message.channel.send("Vous ne pouvez pas warn ce membre")
-        let reason = args.slice(2).join(' ')
+        let reason = args.slice(1).join(' ')
         if (!reason) return message.channel.send(embed2)
         if (!warns[member.id]) {
             warns[member.id] = []

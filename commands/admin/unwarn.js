@@ -26,10 +26,15 @@ module.exports = {
       .setAuthor("Warn")
       .setDescription("Je ne pas unwarn ce membre.")
 
+      const embed5 = new Discord.RichEmbed()
+      .setColor("PURPLE")
+      .setAuthor("Warn")
+      .setDescription("Membre introuvable")
+
       let warns = JSON.parse(fs.readFileSync('./warns.json'))
     let member = message.mentions.members.first()
     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(noperm)
-    if(!member) return message.channel.send("Membre introuvable")
+    if(!member) return message.channel.send(embed5)
     if(member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.ownerID) return message.channel.send(embed)
     if(!member.manageable) return message.channel.send(embed3)
     if(!warns[member.id] || !warns[member.id].length) return message.channel.send(embed2)
