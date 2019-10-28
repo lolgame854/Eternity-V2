@@ -102,7 +102,7 @@ module.exports = {
         .then(m => m.delete(5000));
     }
 
-    const embed = new RichEmbed()
+    const embed9 = new RichEmbed()
       .setColor("PURPLE")
       .setThumbnail(toKick.user.displayAvatarURL)
       .setFooter(message.member.displayName, message.author.displayAvatarURL)
@@ -132,7 +132,7 @@ module.exports = {
             );
         });
 
-        logChannel.send(embed);
+        logChannel.send(embed9);
         
       } else if (emoji === "❌") {
         msg.delete();
