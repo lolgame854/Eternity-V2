@@ -14,7 +14,8 @@ module.exports = {
         .addField(":robot:  Commmdes pour le bot", "e!bot | e!botinvite | [modifstatus] | [modifactivity]")
         .addField(":tada: Commandes fun", "e!chien | e!chat | e!avatar | e!8ball | e!math")
         .addField(":hammer_pick: Utility", "e!checkweb | e!checkmc | e!bitly")
-        .addField(":oncoming_police_car: Admin", "e!ban | [kick] | e!mute | e!unmute | e!clear | [report]\n[raidmode] | [warn]")
+        .addField(":loud_sound: Commandes music :", "e!play | e!stop")
+        .addField(":oncoming_police_car: Admin", "e!ban | e!kick | e!mute | e!unmute | e!clear | e!report\n[raidmode] | [warn]")
         .addField(":tools:  Createur", "e!maintenance")
         .setFooter("Eternity © 2019 Un problème ? Demandes à lolgame854#3470 !")
         

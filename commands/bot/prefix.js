@@ -17,7 +17,7 @@ module.exports = {
         .setDescription("Commande : ``[prefix + sayembed]`` + ``[message]``")
         .setFooter("Eternity © 2019 | by lolgame854")
     
-        if(!message.member.hasPermission("ADMINISTRATOR"))
+        if(!message.member.hasPermission("MANAGE_MESSAGES"))
         return message.channel.send(noperm)
         
        if(!args[0] || args[0 == "help"])
