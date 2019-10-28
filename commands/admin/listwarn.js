@@ -14,7 +14,7 @@ module.exports = {
       .setColor("PURPLE")
       .setAuthor("Warn")
       .setDescription("Veuillez mentionner un membre")
-      let warns = JSON.parse(fs.readFileSync('../../warns.json'))
+      let warns = JSON.parse(fs.readFileSync('./warns.json'))
     if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(noperm)
         let member = message.mentions.members.first()
         if (!member) return message.channel.send(embed)
