@@ -2,6 +2,7 @@ const { Client, Collection } = require("discord.js");
 const { config } = require("dotenv");
 const fs = require("fs")
 const Discord = require('discord.js')
+const prefix = "e!"
 
 const client = new Client({
   disableEveryone: false
@@ -37,7 +38,15 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-  const prefix = "e!";
+  const prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+
+    if(!prefixes[message.guild.id]){
+        prefixes[message.guild.id] = {
+            prefixes: prefix
+        }
+    }
+
+  const prefix = prefixes[message.guild.id].prefixes;
 
   if (message.author.bot) return;
   if (!message.guild) return;
