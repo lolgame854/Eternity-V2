@@ -11,11 +11,11 @@ module.exports = {
         .setDescription("Les commandes avec [] sont en création ou en maintenance.")
         .addField(":page_with_curl: Commandes information", "e!help | e!sondage | [giveaway] | e!userinfo | e!serverinfo")
         .addField(":computer:  Commandes basic", "e!ping | e!say | e!sayembed")
-        .addField(":robot:  Commmdes pour le bot", "e!bot | e!botinvite | [modifstatus] | [modifactivity]")
+        .addField(":robot:  Commmdes pour le bot", "e!bot | e!botinvite")
         .addField(":tada: Commandes fun", "e!chien | e!chat | e!avatar | e!8ball | e!math")
         .addField(":hammer_pick: Utility", "e!checkweb | e!checkmc | e!bitly")
         .addField(":headphones: Commandes music :", "e!play | e!stop")
-        .addField(":oncoming_police_car: Admin", "e!ban | e!kick | e!mute | e!unmute | e!clear | e!report\n[raidmode] | [warn]")
+        .addField(":oncoming_police_car: Admin", "e!ban | e!kick | e!mute | e!unmute | e!clear | e!report\n[raidmode] | e!warn | e!listwarn | e!unwarn")
         .addField(":tools:  Createur", "e!maintenance")
         .setFooter("Eternity © 2019 Un problème ? Demandes à lolgame854#3470 !")
         

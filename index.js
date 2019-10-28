@@ -40,6 +40,7 @@ client.on('ready', () => {
 }, 5000);
 })
 
+
 client.on("message", async message => {
   const prefixe = "e!"
 
