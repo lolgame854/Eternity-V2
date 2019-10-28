@@ -37,13 +37,13 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-  const prefix = "e!"
-  
+  const prefixe = "e!"
+
   const prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
 
     if(!prefixes[message.guild.id]){
         prefixes[message.guild.id] = {
-            prefixes: prefix
+            prefixes: prefixe
         }
     }
 
