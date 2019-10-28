@@ -13,7 +13,7 @@ module.exports = {
     .addField(":wrench: Commande en construction :", config.cons)
     .addField(":sunglasses: Nombre de serveur :", client.guilds.size)
     .addField(":smile: Nombre de membre de tout les serveur :", client.users.size)
-    .addField(":newspaper2: Tout les channel des serveur :", client.channels.size)
+    .addField(":newspaper2: Tout les channel et vocal des serveur :", client.channels.size)
     .addField(":tools: Mon createur :", "lolgame854#3470")
     .addField(":page_facing_up: Version du bot :", config.version)
     .setFooter("Eternity © 2019 Un problème ? Demandes à lolgame854#3470 !")
