@@ -31,6 +31,7 @@ client.on('ready', () => {
     `${client.guilds.size} serveur`,
     `${client.users.size} membre`,
     `${client.channels.size} channel`,
+    `lolgame854#3470`
     `e! => e!help`
 ]
   setInterval(function() {
