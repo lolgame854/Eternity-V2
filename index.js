@@ -1,14 +1,14 @@
 const { Client, Collection } = require("discord.js");
-const { config } = require("dotenv");
-const fs = require("fs");
+const config = require('./config.json')
+const fs = require("fs")
 const Discord = require('discord.js')
 
 const client = new Client({
-  disableEveryone: true
+  disableEveryone: false
 });
 
 var maintenance = false // Si on redemarre le bot, il n'y a plus de maintenance
-var list_commandes = ["8ball", "avatar", "chat", "chien", "ping", "say", "sayembed"] // Liste de toute les commandes du bot
+var list_commandes = ["checkmec", "checkxeb", "help", "serverinfo", "sondage", "userinfo", "bitly", "math", "8ball", "bot", "avatar", "chat", "ban", "clear", "mute", "unmute", "chien", "ping", "say", "sayembed"] // Liste de toute les commandes du bot
 var messageAuthorIsSTAFF = false // Si l'auteur de la commande est un membre du staff
 
 client.commands = new Collection();
@@ -108,4 +108,4 @@ client.on("message", async message => {
 
 });
 
-client.login(process.env.TOKEN);
+client.login(config.token);
