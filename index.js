@@ -24,16 +24,14 @@ config({
   require(`./handlers/${handler}`)(client);
 });
 
-client.on("ready", () => {
-  console.log(`Salut, ${client.user.username} est en ligne !`);
-
-  client.user.setPresence({
-    status: "online",
-    game: {
-      name: `Besoin d'aide ? => e!help`,
-      type: "WATCHING"
-    }
-  });
+fs.readdir('./Events/', (error, f) => {
+  if (error) { return console.error(error); }
+      console.log(`${f.length} events chargés`);
+      f.forEach((f) => {
+          let events = require(`./Events/${f}`);
+          let event = f.split('.')[0];
+          client.on(event, events.bind(null, client));
+      });
 });
 
 client.on("message", async message => {
