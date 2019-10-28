@@ -24,16 +24,6 @@ config({
   require(`./handlers/${handler}`)(client);
 });
 
-fs.readdir('./Events/', (error, f) => {
-  if (error) { return console.error(error); }
-      console.log(`${f.length} events chargés`);
-      f.forEach((f) => {
-          let events = require(`./Events/${f}`);
-          let event = f.split('.')[0];
-          client.on(event, events.bind(null, client));
-      });
-});
-
 client.on("message", async message => {
   const prefixe = "e!"
 
