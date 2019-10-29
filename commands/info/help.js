@@ -15,7 +15,7 @@ module.exports = {
         .addField(":tada: Commandes fun", "e!chien | e!chat | e!avatar | e!8ball | e!math")
         .addField(":hammer_pick: Utility", "e!checkweb | e!checkmc | e!bitly")
         .addField(":headphones: Commandes music :", "e!play | e!stop")
-        .addField(":oncoming_police_car: Admin", "e!ban | e!kick | e!mute | e!unmute | e!clear | e!report\n[raidmode] | e!warn | e!listwarn | e!unwarn")
+        .addField(":oncoming_police_car: Admin", "e!ban | e!kick | e!mute | e!unmute | e!clear | e!report\ne!warn | e!listwarn | e!unwarn")
         .addField(":tools:  Createur", "e!maintenance")
         .setFooter("Eternity © 2019 Un problème ? Demandes à lolgame854#3470 !")
         
