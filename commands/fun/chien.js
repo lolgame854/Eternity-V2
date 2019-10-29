@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client()
+const superagent = require("superagent");
 module.exports = {
   name: "chien",
   category: "fun",

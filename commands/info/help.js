@@ -11,7 +11,7 @@ module.exports = {
         .setDescription("Les commandes avec [] sont en création ou en maintenance.")
         .addField(":page_with_curl: Commandes information", "e!help | e!sondage | [giveaway] | e!userinfo | e!serverinfo")
         .addField(":computer:  Commandes basic", "e!ping | e!say | e!sayembed")
-        .addField(":robot:  Commmdes pour le bot", "e!bot | e!botinvite")
+        .addField(":robot:  Commmdes pour le bot", "e!bot | e!botinvite | e!discord")
         .addField(":tada: Commandes fun", "e!chien | e!chat | e!avatar | e!8ball | e!math")
         .addField(":hammer_pick: Utility", "e!checkweb | e!checkmc | e!bitly")
         .addField(":headphones: Commandes music :", "e!play | e!stop")
