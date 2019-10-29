@@ -5,6 +5,7 @@ module.exports = {
   category: "basic",
   description: "",
   run: async (client, message, args) => {
+    message.delete();
     const args1 = message.content.trim().split(/ +/g)
     const repons = args1.slice(1).join(" ")
 
@@ -22,7 +23,6 @@ module.exports = {
     .setAuthor(message.author.username, message.author.displayAvatarURL)
     .setDescription(repons)
     .setTimestamp()
-    message.delete()
     message.channel.send(embed)
   }
 };

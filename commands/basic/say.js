@@ -5,6 +5,7 @@ module.exports = {
   category: "basic",
   description: "",
   run: async (client, message, args) => {
+    message.delete();
     const args1 = message.content.trim().split(/ +/g)
     const repons = args1.slice(1).join(" ")
     
@@ -16,8 +17,6 @@ module.exports = {
 
     if(!args[0])
     return message.channel.send(help)
-
-    message.delete();
 
     const roleColor = message.guild.me.highestRole.hexColor;
 

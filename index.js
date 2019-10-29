@@ -99,7 +99,7 @@ client.on("message", async message => {
         list_commandes.forEach(function(item, index, array) {
             if (message.content.startsWith(prefix + item)){
                 if (!messageAuthorIsSTAFF) {
-                    message.channel.send(embed3)
+                    message.channel.send("test1")
                     maintenance = true
                 } 
             }
@@ -112,13 +112,13 @@ client.on("message", async message => {
         if (message.author.id === "411817236332806165") {
             if (maintenance){
                 maintenance = false
-                message.channel.send(embed2)
+                message.channel.send("test2")
             } else {
                 maintenance = true
-                message.channel.send(embed)
+                message.channel.send("test3")
             } 
         } else {
-            message.channel.send(embed4)
+            message.channel.send("test4")
         }
     }
 
