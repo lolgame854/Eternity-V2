@@ -92,35 +92,6 @@ client.on("message", async message => {
   .setColor("PURPLE")
   .setAuthor(client.user.username)
   .setDescription("Seul le createur peut mettre le bot en maintenance")
-  
-  if (message.author.id === "411817236332806165") messageAuthorIsSTAFF = true // ID du staff du bot
-
-    if (maintenance){
-        list_commandes.forEach(function(item, index, array) {
-            if (message.content.startsWith(prefix + item)){
-                if (!messageAuthorIsSTAFF) {
-                    message.channel.send("Le bot est en maintenance, seul le STAFF de ERERNITY peuvent utiliser le bot")
-                    maintenance = true
-                } 
-            }
-        });
-    }
-
-    if (!messageAuthorIsSTAFF && maintenance) return
-
-    if(message.content === prefix + "maintenance"){
-        if (message.author.id === "411817236332806165") {
-            if (maintenance){
-                maintenance = false
-                message.channel.send("Maintenance désactivé")
-            } else {
-                maintenance = true
-                message.channel.send("Maintenance activé")
-            } 
-        } else {
-            message.channel.send("Seul le staff de ETERNITY peuvent utilisez cette commande")
-        }
-    }
 
 });
 
