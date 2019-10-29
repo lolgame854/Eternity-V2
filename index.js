@@ -97,9 +97,9 @@ client.on("message", async message => {
 
     if (maintenance){
         list_commandes.forEach(function(item, index, array) {
-            if (message.content.startsWith(prefixe + item)){
+            if (message.content.startsWith(prefix + item)){
                 if (!messageAuthorIsSTAFF) {
-                    message.channel.send(embed3)
+                    message.channel.send("Le bot est en maintenance, seul le STAFF de ERERNITY peuvent utiliser le bot")
                     maintenance = true
                 } 
             }
@@ -108,20 +108,20 @@ client.on("message", async message => {
 
     if (!messageAuthorIsSTAFF && maintenance) return
 
-    if(message.content === prefixe + "maintenance"){
-        if (message.author.id === "411817236332806165") {
+    if(message.content === prefix + "maintenance"){
+        if (message.author.id === "449907751225655299") {
             if (maintenance){
                 maintenance = false
-                message.channel.send(embed2)
+                message.channel.send("Maintenance désactivé")
             } else {
                 maintenance = true
-                message.channel.send(embed)
+                message.channel.send("Maintenance activé")
             } 
         } else {
-            message.channel.send(embed4)
+            message.channel.send("Seul le staff de ETERNITY peuvent utilisez cette commande")
         }
     }
-
+    
 });
 
 client.login(process.env.TOKEN);
