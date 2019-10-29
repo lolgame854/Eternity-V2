@@ -38,7 +38,7 @@ module.exports = {
         .setTitle(":tada: **GIVEAWAY** :tada:")
         .setColor("PURPLE")
         .setFooter(`Expire: ${dateTime}`)
-        .setDescription(item);
+        .setDescription(`${item}\n \nLe GiveAway a été créé par ${message.author.username}`);
     var embedSend = await message.channel.send(giveawayEmbed);
     embedSend.react("🎉");
     setTimeout(function () {
