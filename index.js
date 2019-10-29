@@ -109,7 +109,7 @@ client.on("message", async message => {
     if (!messageAuthorIsSTAFF && maintenance) return
 
     if(message.content === prefix + "maintenance"){
-        if (message.author.id === "449907751225655299") {
+        if (message.author.id === "411817236332806165") {
             if (maintenance){
                 maintenance = false
                 message.channel.send("Maintenance désactivé")
@@ -121,7 +121,7 @@ client.on("message", async message => {
             message.channel.send("Seul le staff de ETERNITY peuvent utilisez cette commande")
         }
     }
-    
+
 });
 
 client.login(process.env.TOKEN);
