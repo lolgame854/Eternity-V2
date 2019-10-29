@@ -97,9 +97,9 @@ client.on("message", async message => {
 
     if (maintenance){
         list_commandes.forEach(function(item, index, array) {
-            if (message.content.startsWith(prefix + item)){
+            if (message.content.startsWith(prefixe + item)){
                 if (!messageAuthorIsSTAFF) {
-                    message.channel.send("test1")
+                    message.channel.send(embed3)
                     maintenance = true
                 } 
             }
@@ -108,17 +108,17 @@ client.on("message", async message => {
 
     if (!messageAuthorIsSTAFF && maintenance) return
 
-    if(message.content === prefix + "maintenance"){
+    if(message.content === prefixe + "maintenance"){
         if (message.author.id === "411817236332806165") {
             if (maintenance){
                 maintenance = false
-                message.channel.send("test2")
+                message.channel.send(embed2)
             } else {
                 maintenance = true
-                message.channel.send("test3")
+                message.channel.send(embed)
             } 
         } else {
-            message.channel.send("test4")
+            message.channel.send(embed4)
         }
     }
 
