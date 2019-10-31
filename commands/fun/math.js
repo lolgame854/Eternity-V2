@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const math = require('mathjs')
 module.exports = {
   name: "math",
   category: "fun",
