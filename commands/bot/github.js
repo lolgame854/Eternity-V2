@@ -11,5 +11,6 @@ module.exports = {
     .setURL('https://github.com/lolgame854/SourceCode')
     .setDescription("Voici le github d'un bot que j'ai créé. ^^")
     .setFooter("Eternity © 2019 Un problème ? Demandes à lolgame854#3470 !")
+    message.channel.send(embed)
   }
 };
