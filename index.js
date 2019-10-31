@@ -40,7 +40,6 @@ client.on('ready', () => {
 }, 5000);
 })
 
-
 client.on("message", async message => {
   const prefixe = "e!"
 
@@ -72,26 +71,6 @@ client.on("message", async message => {
   if (!command) command = client.commands.get(client.aliases.get(cmd));
 
   if (command) command.run(client, message, args);
-
-  const embed = new Discord.RichEmbed()
-  .setColor("PURPLE")
-  .setAuthor(client.user.username)
-  .setDescription("Maintenance activé")
-
-  const embed2 = new Discord.RichEmbed()
-  .setColor("PURPLE")
-  .setAuthor(client.user.username)
-  .setDescription("Maintenance désactivé")
-
-  const embed3 = new Discord.RichEmbed()
-  .setColor("PURPLE")
-  .setAuthor(client.user.username)
-  .setDescription("Le bot est actuellement en maintenance !")
-
-  const embed4 = new Discord.RichEmbed()
-  .setColor("PURPLE")
-  .setAuthor(client.user.username)
-  .setDescription("Seul le createur peut mettre le bot en maintenance")
 
 });
 

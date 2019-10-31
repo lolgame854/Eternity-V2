@@ -16,7 +16,7 @@ module.exports = {
         .addField(":hammer_pick: Utility", "e!checkweb | e!checkmc | e!bitly")
         .addField(":headphones: Commandes music :", "e!play | e!stop")
         .addField(":oncoming_police_car: Admin", "e!ban | e!kick | e!mute | e!unmute | e!clear | e!report\ne!warn | e!listwarn | e!unwarn")
-        .addField(":tools:  Createur", "e!maintenance")
+        .addField(":tools:  Createur", "Aucune")
         .setFooter("Eternity © 2019 Un problème ? Demandes à lolgame854#3470 !")
         
         const embed2 = new Discord.RichEmbed()
