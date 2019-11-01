@@ -16,11 +16,12 @@ module.exports = {
     const args1 = message.content.trim().split(/ +/g)
     const saymsg = args1.slice(1).join(" ")
 
+    message.delete()
     if (!message.member.hasPermission("MANAGE_MESSAGES"))
     return message.channel.send(noperm);
   if(!args[0]) return message.channel.send(embed);
   message.guild.members.forEach(member => {
-    member.send(`Annonce envoyer par : ${message.author.tag} Message : ${saymsg}`).catch(e => {});
+    member.send(`Annonce envoyer par : ${message.author.tag}\nMessage : \n \n${saymsg}`).catch(e => {});
   })
   }
 };
