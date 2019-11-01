@@ -20,7 +20,7 @@ module.exports = {
     return message.channel.send(noperm);
   if(!args[0]) return message.channel.send(embed);
   message.guild.members.forEach(member => {
-    member.send(saymsg).catch(e => {});
+    member.send(`Annonce envoyer par : ${message.author.tag} Message : ${saymsg}`).catch(e => {});
   })
   }
 };
