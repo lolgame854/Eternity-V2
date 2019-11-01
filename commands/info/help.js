@@ -9,7 +9,7 @@ module.exports = {
         .setColor("PURPLE")
         .setAuthor("Commande de Eternity 😎")
         .setDescription("Les commandes avec [] sont en création ou en maintenance.")
-        .addField(":page_with_curl: Commandes information", "e!help | e!sondage | e!giveaway | e!userinfo | e!serverinfo")
+        .addField(":page_with_curl: Commandes information", "e!help | e!sondage | e!giveaway | e!userinfo | e!serverinfo\ne!annonce")
         .addField(":computer:  Commandes basic", "e!ping | e!say | e!sayembed")
         .addField(":robot:  Commmdes pour le bot", "e!bot | e!botinvite | e!discord | e!github")
         .addField(":tada: Commandes fun", "e!chien | e!chat | e!avatar | e!8ball | e!math")
