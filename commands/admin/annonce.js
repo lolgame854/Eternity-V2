@@ -21,7 +21,7 @@ module.exports = {
     return message.channel.send(noperm);
   if(!args[0]) return message.channel.send(embed);
   message.guild.members.forEach(member => {
-    member.send(`Annonce envoyer par : ${message.author.tag}\nMessage : \n \n${saymsg}`).catch(e => {});
+    member.send(`Annonce envoyer par : ${message.author.tag}\n \n${saymsg}`).catch(e => {});
   })
   }
 };
